@@ -44,7 +44,7 @@ Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 %build
 autoconf
 %configure
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
