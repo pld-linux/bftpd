@@ -14,10 +14,10 @@ Source3:	ftpusers.tar.bz2
 URL:		http://www.bftpd.org/
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
-Requires:	inetdaemon
 Prereq:		rc-inetd
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires:	inetdaemon
 Provides:	ftpserver
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	ftpserver
 Obsoletes:	anonftp
 Obsoletes:	ftpd-BSD
@@ -59,7 +59,8 @@ Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-inetd,/home/services/ftp}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 #install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/ftp
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/ftpd
