@@ -5,10 +5,11 @@ Version:	1.0.18
 Release:	3
 License:	GPL
 Group:		Daemons
-Source0:	http://www.bftpd.f2s.com/downloads/src/%{name}-%{version}.tar.gz
+Source0:	http://bftpd.sourceforge.net/downloads/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
+URL:		http://www.bftpd.org/
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
 Requires:	inetdaemon
