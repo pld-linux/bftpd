@@ -1,7 +1,7 @@
 Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
-Version:	1.0.16
+Version:	1.0.17
 Release:	1
 License:	GPL
 Group:		Daemons
