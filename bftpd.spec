@@ -12,7 +12,7 @@ Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Patch0:		%{name}-NOROOT.patch
 Requires:	inetdaemon
-Requires:	rc-inetd
+Prereq:		rc-inetd
 Provides:	ftpserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	ftpserver
@@ -20,6 +20,7 @@ Obsoletes:	wu-ftpd
 Obsoletes:	anonftp
 Obsoletes:	ftpd-BSD
 Obsoletes:	linux-ftpd
+Obsoletes:	pure-ftpd
 Obsoletes:	troll-ftpd
 
 %description
@@ -45,6 +46,7 @@ Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-inetd,/home/ftp}
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/ftp
