@@ -2,7 +2,7 @@ Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
 Version:	1.0.18
-Release:	1
+Release:	2
 License:	GPL
 Group:		Daemons
 Source0:	http://www.bftpd.f2s.com/downloads/src/%{name}-%{version}.tar.gz
@@ -21,8 +21,12 @@ Obsoletes:	heimdal-ftpd
 Obsoletes:	linux-ftpd
 Obsoletes:	muddleftpd
 Obsoletes:	proftpd
+Obsoletes:	proftpd-common
+Obsoletes:	proftpd-inetd
+Obsoletes:	proftpd-standalone
 Obsoletes:	pure-ftpd
 Obsoletes:	troll-ftpd
+Obsoletes:	vsftpd
 Obsoletes:	wu-ftpd
 
 %description
