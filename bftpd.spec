@@ -1,8 +1,8 @@
 Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
-Version:	1.0.18
-Release:	3
+Version:	1.0.22
+Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	http://bftpd.sourceforge.net/downloads/src/%{name}-%{version}.tar.gz
@@ -55,7 +55,7 @@ Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-inetd,/home/ftp}
+install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-inetd,/home/services/ftp}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
@@ -82,12 +82,14 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README CHANGELOG
+%doc CHANGELOG
+%doc %lang(en) doc/en/*.{html,txt}
+%doc %lang(pl) doc/pl/*.{html,txt}
 %attr(755,root,root) %{_sbindir}/*
 #%attr(640,root,root) /etc/pam.d/ftp
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
 %attr(640,root,root) %config /etc/sysconfig/rc-inetd/ftpd
-%dir %attr(555,ftp,ftp) /home/ftp
+%dir %attr(555,ftp,ftp) /home/services/ftp
 
 %{_mandir}/man8/*
 %lang(ja) %{_mandir}/ja/man5/ftpusers*
