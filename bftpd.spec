@@ -9,6 +9,7 @@ Source0:	http://bftpd.sourceforge.net/downloads/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
+# Source3-md5: 76c80b6ec9f4d079a1e27316edddbe16
 URL:		http://www.bftpd.org/
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
