@@ -2,12 +2,13 @@ Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
 Version:	1.0.18
-Release:	2
+Release:	3
 License:	GPL
 Group:		Daemons
 Source0:	http://www.bftpd.f2s.com/downloads/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
+Source3:	ftpusers.tar.bz2
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
 Requires:	inetdaemon
@@ -28,6 +29,7 @@ Obsoletes:	pure-ftpd
 Obsoletes:	troll-ftpd
 Obsoletes:	vsftpd
 Obsoletes:	wu-ftpd
+Conflicts:	man-pages < 1.51
 
 %description
 bftpd is a Linux FTP server with chroot and setreuid. Not all FTP
@@ -60,6 +62,8 @@ install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-i
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/sysconfig/rc-inetd/ftpd
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}
 
+bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -85,3 +89,7 @@ fi
 %dir %attr(555,ftp,ftp) /home/ftp
 
 %{_mandir}/man8/*
+%lang(ja) %{_mandir}/ja/man5/ftpusers*
+%lang(pl) %{_mandir}/pl/man5/ftpusers*
+%lang(pt_BR) %{_mandir}/pt_BR/man5/ftpusers*
+%lang(ru) %{_mandir}/ru/man5/ftpusers*
