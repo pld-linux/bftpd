@@ -20,6 +20,7 @@ Obsoletes:	wu-ftpd
 Obsoletes:	anonftp
 Obsoletes:	ftpd-BSD
 Obsoletes:	linux-ftpd
+Obsoletes:	proftpd
 Obsoletes:	pure-ftpd
 Obsoletes:	troll-ftpd
 
