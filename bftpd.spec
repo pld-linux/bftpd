@@ -1,13 +1,13 @@
 Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
-Version:	1.0.15
+Version:	1.0.16
 Release:	1
 License:	GPL
 Group:		Daemons
 Group(de):	Server
 Group(pl):	Serwery
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://c.codercity.de/bruksoft/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Patch0:		%{name}-NOROOT.patch
