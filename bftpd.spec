@@ -11,19 +11,21 @@ Source0:	http://www.bftpd.f2s.com/downloads/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Patch0:		%{name}-NOROOT.patch
+BuildRequires:	autoconf
 Requires:	inetdaemon
 Prereq:		rc-inetd
-Provides:	ftpserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Provides:	ftpserver
 Obsoletes:	ftpserver
-Obsoletes:	wu-ftpd
 Obsoletes:	anonftp
 Obsoletes:	ftpd-BSD
 Obsoletes:	heimdal-ftpd
 Obsoletes:	linux-ftpd
+Obsoletes:	muddleftpd
 Obsoletes:	proftpd
 Obsoletes:	pure-ftpd
 Obsoletes:	troll-ftpd
+Obsoletes:	wu-ftpd
 
 %description
 bftpd is a Linux FTP server with chroot and setreuid. Not all FTP
@@ -33,7 +35,7 @@ subdirectory, and user authentication is via passwd/shadow or PAM.
 
 %description -l pl
 bftpd jest linuksowym serwerem FTP z chroot i setreuid. Nie wszystkie
-komdeny FTP s± dostêpne. Nie wymaga specjalnego katalogu domowego i
+komendy FTP s± dostêpne. Nie wymaga specjalnego katalogu domowego i
 dostêpu poza katalogiem domowym u¿ytkownika i podkatalogiem .ftp.
 Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 
