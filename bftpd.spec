@@ -32,7 +32,7 @@ preparation and accesses either the user's home directory or its .ftp
 subdirectory, and user authentication is via passwd/shadow or PAM.
 
 %description -l pl
-bftpd jest linuxowym serwerem FTP z chroot i setreuid. Nie wszystkie
+bftpd jest linuksowym serwerem FTP z chroot i setreuid. Nie wszystkie
 komdeny FTP s± dostêpne. Nie wymaga specjalnego katalogu domowego i
 dostêpu poza katalogiem domowym u¿ytkownika i podkatalogiem .ftp.
 Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
