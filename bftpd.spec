@@ -59,7 +59,7 @@ install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-i
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/ftp
+#install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/ftp
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/ftpd
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}
 
