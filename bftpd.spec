@@ -5,8 +5,6 @@ Version:	1.0.18
 Release:	1
 License:	GPL
 Group:		Daemons
-Group(de):	Server
-Group(pl):	Serwery
 Source0:	http://www.bftpd.f2s.com/downloads/src/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
