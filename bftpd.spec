@@ -60,8 +60,6 @@ install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-i
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/sysconfig/rc-inetd/ftpd
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf README CHANGELOG
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -79,7 +77,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README CHANGELOG
 %attr(755,root,root) %{_sbindir}/*
 #%attr(640,root,root) /etc/pam.d/ftp
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
