@@ -1,15 +1,16 @@
 Summary:	Small FTP server
 Summary(pl):	Ma³y serwer FTP
 Name:		bftpd
-Version:	1.0.22
-Release:	2
+Version:	1.0.24
+Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	http://bftpd.sourceforge.net/downloads/src/%{name}-%{version}.tar.gz
+# Source0-md5:	74b1c2bad8fe85d78c8fa67cbf135bed
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
-# Source3-md5: 76c80b6ec9f4d079a1e27316edddbe16
+# Source3-md5:	76c80b6ec9f4d079a1e27316edddbe16
 URL:		http://www.bftpd.org/
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
