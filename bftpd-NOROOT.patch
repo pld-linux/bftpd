@@ -1,18 +1,20 @@
---- bftpd-1.0.16.orig/Makefile.in	Thu Jan 18 16:13:40 2001
-+++ bftpd-1.0.16/Makefile.in	Sun Jan 28 01:04:53 2001
-@@ -40,12 +40,9 @@
+--- bftpd-1.0.24/Makefile.in.orig	Mon May 26 16:00:16 2003
++++ bftpd-1.0.24/Makefile.in	Mon May 26 16:02:53 2003
+@@ -26,14 +26,10 @@
  $(OBJS): $(HEADERS) Makefile
  
  install: all
 -	$(INSTALL) -g 0 -m 700 -o 0 bftpd $(DESTDIR)/$(prefix)/sbin
 -	$(INSTALL) -g 0 -m 644 -o 0 bftpd.8 $(DESTDIR)/$(mandir)/man8
--	[ -f $(DESTDIR)/etc/bftpd.conf ] || \
++	$(INSTALL) bftpd $(DESTDIR)/$(prefix)/sbin
++	$(INSTALL) bftpd.8 $(DESTDIR)/$(mandir)/man8
+ 	[ -f $(DESTDIR)/etc/bftpd.conf ] || \
 -		$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/etc
 -	touch /var/log/bftpd.log
 -	chmod 644 /var/log/bftpd.log
-+	$(INSTALL) -m 700 bftpd $(DESTDIR)/$(prefix)/sbin
-+	$(INSTALL) -m 644 bftpd.8 $(DESTDIR)/$(mandir)/man8
-+	$(INSTALL) -m 600 bftpd.conf $(DESTDIR)/etc
+-	mkdir -p /var/run/bftpd
+-	chmod 755 /var/run/bftpd
++		$(INSTALL) bftpd.conf $(DESTDIR)/etc
  
  clean distclean:
- 	rm -f *~ $(OBJS) bftpd
+ 	rm -f *~ $(OBJS) bftpd mksources.finished
