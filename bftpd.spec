@@ -42,7 +42,7 @@ Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
 %patch0 -p1
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
