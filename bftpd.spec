@@ -14,7 +14,7 @@ Source3:	ftpusers.tar.bz2
 URL:		http://www.bftpd.org/
 Patch0:		%{name}-NOROOT.patch
 BuildRequires:	autoconf
-Prereq:		rc-inetd
+Requires:	rc-inetd
 Requires:	inetdaemon
 Provides:	ftpserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -91,8 +91,8 @@ fi
 %doc %lang(pl) doc/pl/*.{html,txt}
 %attr(755,root,root) %{_sbindir}/*
 #%attr(640,root,root) /etc/pam.d/ftp
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
-%attr(640,root,root) %config /etc/sysconfig/rc-inetd/ftpd
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}.conf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/rc-inetd/ftpd
 %dir %attr(555,ftp,ftp) /home/services/ftp
 
 %{_mandir}/man5/ftpusers.5*
