@@ -1,5 +1,5 @@
 Summary:	Small FTP server
-Summary(pl):	Ma³y serwer FTP
+Summary(pl.UTF-8):   MaÅ‚y serwer FTP
 Name:		bftpd
 Version:	1.0.24
 Release:	2
@@ -42,11 +42,11 @@ commands are included. It doesn't need special home directory
 preparation and accesses either the user's home directory or its .ftp
 subdirectory, and user authentication is via passwd/shadow or PAM.
 
-%description -l pl
+%description -l pl.UTF-8
 bftpd jest linuksowym serwerem FTP z chroot i setreuid. Nie wszystkie
-komendy FTP s± dostêpne. Nie wymaga specjalnego katalogu domowego i
-dostêpu poza katalogiem domowym u¿ytkownika i podkatalogiem .ftp.
-Autoryzacja u¿ytkowników poprzez passwd/shadow lub PAM.
+komendy FTP sÄ… dostÄ™pne. Nie wymaga specjalnego katalogu domowego i
+dostÄ™pu poza katalogiem domowym uÅ¼ytkownika i podkatalogiem .ftp.
+Autoryzacja uÅ¼ytkownikÃ³w poprzez passwd/shadow lub PAM.
 
 %prep
 %setup -q
