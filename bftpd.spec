@@ -1,5 +1,5 @@
 Summary:	Small FTP server
-Summary(pl.UTF-8):   Mały serwer FTP
+Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
 Version:	1.0.24
 Release:	2
