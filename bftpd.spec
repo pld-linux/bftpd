@@ -1,12 +1,12 @@
 Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
-Version:	1.0.24
-Release:	2
+Version:	1.7
+Release:	1
 License:	GPL
 Group:		Daemons
-Source0:	http://bftpd.sourceforge.net/downloads/src/%{name}-%{version}.tar.gz
-# Source0-md5:	74b1c2bad8fe85d78c8fa67cbf135bed
+Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
+# Source0-md5:	b62fe34b49287f16d60e74969ae0b2d2
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
@@ -64,7 +64,6 @@ install -d $RPM_BUILD_ROOT{%{_prefix}{/sbin,/share/man/man8},/etc/sysconfig/rc-i
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-#install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/ftp
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/ftpd
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}
 
