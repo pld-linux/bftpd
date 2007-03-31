@@ -2,7 +2,7 @@ Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
 Version:	1.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Daemons
 Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
@@ -23,6 +23,7 @@ Obsoletes:	ftpd-BSD
 Obsoletes:	ftpserver
 Obsoletes:	glftpd
 Obsoletes:	heimdal-ftpd
+Obsoletes:	krb5-ftpd
 Obsoletes:	linux-ftpd
 Obsoletes:	muddleftpd
 Obsoletes:	proftpd
