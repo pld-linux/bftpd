@@ -2,7 +2,7 @@ Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
 Version:	1.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		Daemons
 Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
@@ -18,22 +18,6 @@ BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	inetdaemon
 Requires:	rc-inetd
 Provides:	ftpserver
-Obsoletes:	anonftp
-Obsoletes:	ftpd-BSD
-Obsoletes:	ftpserver
-Obsoletes:	glftpd
-Obsoletes:	heimdal-ftpd
-Obsoletes:	krb5-ftpd
-Obsoletes:	linux-ftpd
-Obsoletes:	muddleftpd
-Obsoletes:	proftpd
-Obsoletes:	proftpd-common
-Obsoletes:	proftpd-inetd
-Obsoletes:	proftpd-standalone
-Obsoletes:	pure-ftpd
-Obsoletes:	troll-ftpd
-Obsoletes:	vsftpd
-Obsoletes:	wu-ftpd
 Conflicts:	man-pages < 1.51
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
