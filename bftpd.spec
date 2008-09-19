@@ -1,12 +1,12 @@
 Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
-Version:	1.7
-Release:	3
+Version:	2.2
+Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
-# Source0-md5:	b62fe34b49287f16d60e74969ae0b2d2
+# Source0-md5:	3322a7f7294daaf7e756937a76012be2
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
@@ -34,7 +34,7 @@ dostępu poza katalogiem domowym użytkownika i podkatalogiem .ftp.
 Autoryzacja użytkowników poprzez passwd/shadow lub PAM.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 %patch0 -p1
 
 %build
