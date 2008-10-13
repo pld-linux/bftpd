@@ -1,12 +1,12 @@
 Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
-Version:	2.2
+Version:	2.3
 Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
-# Source0-md5:	3322a7f7294daaf7e756937a76012be2
+# Source0-md5:	4ab1eb33135fa5eaaf050e6d3dd0b319
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
@@ -71,7 +71,7 @@ fi
 %doc %lang(en) doc/en/*.{html,txt}
 %doc %lang(pl) doc/pl/*.{html,txt}
 %attr(755,root,root) %{_sbindir}/*
-#%attr(640,root,root) /etc/pam.d/ftp
+#%%attr(640,root,root) /etc/pam.d/ftp
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}.conf
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/rc-inetd/ftpd
 %dir %attr(555,ftp,ftp) /home/services/ftp
