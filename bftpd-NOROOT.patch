@@ -1,6 +1,7 @@
---- bftpd-1.0.24/Makefile.in.orig	Mon May 26 16:00:16 2003
-+++ bftpd-1.0.24/Makefile.in	Mon May 26 16:02:53 2003
-@@ -26,14 +26,10 @@
+diff -urNp -x '*.orig' bftpd.org/Makefile.in bftpd/Makefile.in
+--- bftpd.org/Makefile.in	2009-10-06 23:27:39.000000000 +0200
++++ bftpd/Makefile.in	2023-02-02 09:01:57.425707183 +0100
+@@ -26,14 +26,10 @@ bftpd: $(OBJS)
  $(OBJS): $(HEADERS) Makefile
  
  install: all
@@ -17,4 +18,4 @@
 +		$(INSTALL) bftpd.conf $(DESTDIR)/etc
  
  clean distclean:
- 	rm -f *~ $(OBJS) bftpd mksources.finished
+ 	rm -f *~ $(OBJS) bftpd mksources.finished config.cache
