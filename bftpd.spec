@@ -1,12 +1,12 @@
 Summary:	Small FTP server
 Summary(pl.UTF-8):	Mały serwer FTP
 Name:		bftpd
-Version:	2.6
-Release:	3
+Version:	6.1
+Release:	1
 License:	GPL
 Group:		Daemons
-Source0:	http://dl.sourceforge.net/bftpd/%{name}-%{version}.tar.gz
-# Source0-md5:	8bfb710e13d8a07290d6ecf6088baa4c
+Source0:	https://master.dl.sourceforge.net/project/bftpd/bftpd/bftpd-%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	d098ae215326e7fa9bd9130b021f9b2a
 Source1:	%{name}.inetd
 Source2:	%{name}.conf
 Source3:	ftpusers.tar.bz2
